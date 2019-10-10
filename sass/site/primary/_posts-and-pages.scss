@@ -1,0 +1,189 @@
+.sticky {
+	display: block;
+}
+
+.sticky-post {
+	background: $color__background-button;
+	color: #fff;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1;
+	padding: .25rem;
+	position: absolute;
+	text-transform: uppercase;
+	top: -$size__spacing-unit;
+	z-index: 1;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-links {
+	clear: both;
+
+}
+
+.entry {
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	.entry-header {
+		// display: grid;
+		// grid-template-columns: $size__site-gutter 1fr 1fr 5fr 1fr 1fr $size__site-gutter;
+
+		// & > * {
+		// 	@include regularContentMaxWidth();
+		// }
+	}
+
+	.entry-title {
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: $color__text-hover;
+			}
+		}
+	}
+
+	.entry-content > *,
+	.entry-summary > * {
+		@include regularContentMaxWidth();
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+
+		@import '../../blocks/alignment';
+	}
+
+	.entry-content {
+		display: grid;
+		grid-template-columns: $size__site-gutter 1fr 1fr 5fr 1fr 1fr $size__site-gutter;
+
+		p {
+			word-wrap: break-word;
+		}
+
+		.more-link {
+
+		}
+
+		a {
+
+		}
+
+		// Block Styles
+		@import '../../blocks/blocks';
+	}
+
+	.entry-meta,
+	.entry-footer {
+
+		> span {
+
+			&:last-child {
+
+			}
+		}
+
+		a {
+
+			&:hover {
+
+			}
+		}
+
+		.svg-icon {
+
+		}
+	}
+
+	.entry-meta {
+
+	}
+
+	.entry-footer {
+		// display: grid;
+		// grid-template-columns: $size__site-gutter 1fr 1fr 5fr 1fr 1fr $size__site-gutter;
+
+		// & > * {
+		// 	@include regularContentMaxWidth();
+		// }
+	}
+
+	.post-thumbnail {
+
+		@include media(tablet) {
+		}
+
+		&:focus {
+
+		}
+
+		.post-thumbnail-inner {
+
+			img {
+
+			}
+		}
+	}
+}
+
+/*
+ * Unset nested content selector styles
+ * - Prevents layout styles from cascading too deeply
+ * - helps with plugin compatibility
+ */
+.entry .entry-content,
+.entry .entry-summary {
+
+	.entry-content,
+	.entry-summary,
+	.entry {
+		margin: inherit;
+		max-width: inherit;
+		padding: inherit;
+
+		@include media(tablet) {
+			margin: inherit;
+			max-width: inherit;
+			padding: inherit;
+		}
+	}
+}
+
+/* Author description */
+
+.author-bio {
+
+	@include media(tablet) {
+
+	}
+
+	@include media(desktop) {
+
+	}
+
+	.author-title {
+
+	}
+
+	.author-description {
+
+		.author-link {
+
+			&:hover {
+
+			}
+		}
+	}
+}

@@ -1,0 +1,443 @@
+/* !Block styles */
+
+//! Paragraphs
+p.has-background {
+
+}
+
+//! Audio
+.wp-block-audio {
+
+	width: 100%;
+
+	audio {
+		width: 100%;
+	}
+
+	&.alignleft audio,
+	&.alignright audio {
+
+		max-width: (0.33 * $mobile_width);
+
+		@include media(tablet) {
+			max-width: (0.5 * $tablet_width);
+		}
+
+		@include media(wide) {
+			max-width: (0.33 * $desktop_width);
+		}
+	}
+}
+
+//! Video
+.wp-block-video {
+
+	video {
+		width: 100%;
+	}
+}
+
+//! Button
+.wp-block-button {
+
+	.wp-block-button__link {
+		@include btn-base;
+
+		&:not(.has-background) {
+			background-color: $color__background-button;
+		}
+
+		&:not(.has-text-color) {
+			color: $color__theme-white;
+		}
+	}
+
+	&:not(.is-style-squared) .wp-block-button__link {
+
+	}
+
+	&.is-style-outline .wp-block-button__link,
+	&.is-style-outline .wp-block-button__link:focus,
+	&.is-style-outline .wp-block-button__link:active {
+		@include button-all-transition;
+
+		&:not(.has-background) {
+			background: transparent;
+		}
+
+		&:not(.has-text-color) {
+			color: $color__background-button;
+			border-color: currentColor;
+		}
+	}
+
+	&.is-style-outline .wp-block-button__link:hover {
+		color: $color__theme-white;
+		border-color: $color__background-button-hover;
+		&:not(.has-background) {
+			color: $color__background-button-hover;
+		}
+	}
+}
+
+//! Verse
+.wp-block-verse,
+.wp-block-verse pre {
+	/* Editor comes with own styles from Gutenberg that don't touch frontend */
+	font-family: $font__body;
+	font-size: $font__size_base;
+	line-height: $font__line-height-pre;
+}
+
+//! Pullquote
+.wp-block-pullquote {
+	
+	blockquote {
+		
+	}
+
+	p {
+		
+		em {
+		}
+
+		@include media(tablet) {
+
+		}
+	}
+
+	cite {
+	
+	}
+
+	&.alignleft,
+	&.alignright {
+
+		blockquote {
+
+		}
+	}
+
+	&.is-style-solid-color {
+
+		@include media(tablet) {
+
+		}
+
+		p {
+
+			@include media(tablet) {
+
+			}
+		}
+
+		a {
+
+		}
+
+		cite {
+			color: inherit;
+		}
+
+		blockquote {
+
+			@include media(tablet) {
+
+			}
+		}
+
+		&.alignright,
+		&.alignleft {
+
+			@include media(tablet) {
+
+			}
+		}
+
+		&.alignfull {
+
+			@include media(tablet) {
+
+			}
+		}
+	}
+}
+
+//! Blockquote
+.wp-block-quote {
+
+	&:not(.is-large),
+	&:not(.is-style-large) {
+
+	}
+
+	p {
+
+	}
+
+	cite {
+
+	}
+
+	&.is-large,
+	&.is-style-large {
+
+		p {
+
+		}
+
+		cite,
+		footer {
+
+		}
+
+		@include media(tablet) {
+
+			p {
+
+			}
+		}
+	}
+}
+
+//! Table
+
+.wp-block-table {
+	font-family: $font__heading;
+}
+
+//! Cover Image
+.wp-block-cover-image,
+.wp-block-cover {
+
+	@include media(tablet) {
+
+	}
+
+	.wp-block-cover-image-text,
+	.wp-block-cover-text,
+	h2 {
+		font-family: $font__heading;
+
+		@include media(tablet) {
+
+		}
+	}
+}
+
+//! Galleries
+.wp-block-gallery {
+	list-style-type: none;
+	padding-left: 0;
+
+	.blocks-gallery-image:last-child,
+	.blocks-gallery-item:last-child {
+		margin-bottom: 16px;
+	}
+}
+
+//! Captions
+.wp-block-audio figcaption,
+.wp-block-video figcaption,
+.wp-block-image figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+
+}
+
+//! Twitter Embed
+.wp-block-embed-twitter {
+	word-break: break-word;
+}
+
+//! File
+.wp-block-file {
+
+	.wp-block-file__button {
+		@include btn-base;
+
+		@include media(desktop) {
+
+		}
+	}
+}
+
+//! Code
+.wp-block-code {
+	border-radius: 0;
+
+	code {
+
+	}
+}
+
+//! Columns
+.wp-block-columns {
+
+	&.alignfull {
+		padding-left: $size__spacing-unit;
+		padding-right: $size__spacing-unit;
+	}
+
+	@include media(mobile) {
+		flex-wrap: nowrap;
+	}
+
+	@include media(tablet) {
+		.wp-block-column > * {
+
+		}
+
+		&[class*='has-'] > * {
+			margin-right: $size__spacing-unit;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&.alignfull,
+		&.alignfull .wp-block-column {
+			padding-left: 2 * $size__spacing-unit;
+			padding-right: 2 * $size__spacing-unit;
+		}
+	}
+}
+
+//! Lists
+ul,
+ol {
+	&.alignfull {
+		//Account for bullets/numbers left padding
+		padding-left: 2 * $size__spacing-unit;
+		padding-right: $size__spacing-unit;
+
+		@include media(tablet) {
+			//Account for bullets/numbers left padding
+			padding-left: 3 * $size__spacing-unit;
+			padding-right: 2 * $size__spacing-unit;
+		}
+	}
+}
+
+//! Separator
+// CSS Grid makes the seperator wonky, need width set to fix
+.wp-block-separator {
+
+	&:not(.is-style-wide):not(.is-style-dots) {
+		width: 30%;
+	}
+
+	&.is-style-wide {
+		width: 100%;
+	}
+}
+
+//! Font Sizes
+.has-small-font-size {
+	font-size: $font__size-xs;
+}
+
+.has-normal-font-size {
+	font-size: $font__size-sm;
+}
+
+.has-large-font-size {
+	font-size: $font__size-lg;
+}
+
+.has-huge-font-size {
+	font-size: $font__size-xxxl;
+}
+
+//! Custom background colors
+.has-primary-background-color,
+.has-secondary-background-color,
+.has-dark-gray-background-color,
+.has-light-gray-background-color {
+
+	// Use white text against these backgrounds by default.
+	color: $color__theme-white;
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	a {
+		color: $color__background-body;
+	}
+}
+
+.has-white-background-color {
+	color: $color__text-main;
+
+	// Use dark gray text against this background by default.
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	a {
+		color: $color__text-main;
+	}
+}
+
+.has-primary-background-color,
+.wp-block-pullquote.is-style-solid-color.has-primary-background-color {
+	background-color: $color__theme-primary;
+}
+
+.has-secondary-background-color,
+.wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
+	background-color: $color__theme-secondary;
+}
+
+.has-dark-gray-background-color,
+.wp-block-pullquote.is-style-solid-color.has-dark-gray-background-color {
+	background-color: $color__theme-dark-gray;
+}
+
+.has-light-gray-background-color,
+.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
+	background-color: $color__theme-light-gray;
+}
+
+.has-white-background-color,
+.wp-block-pullquote.is-style-solid-color.has-white-background-color {
+	background-color: $color__theme-white;
+}
+
+//! Custom foreground colors
+.has-primary-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-primary-color p {
+	color: $color__theme-primary;
+}
+
+.has-secondary-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-secondary-color p {
+	color: $color__theme-secondary;
+}
+
+.has-dark-gray-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-dark-gray-color p {
+	color: $color__theme-dark-gray;
+}
+
+.has-light-gray-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-light-gray-color p {
+	color: $color__theme-light-gray;
+}
+
+.has-white-color,
+.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
+	color: $color__theme-white;
+}

@@ -1,0 +1,125 @@
+/* Next/Previous navigation */
+
+// Singular navigation
+.post-navigation {
+
+	@include media(tablet) {
+
+	}
+
+	@include media(desktop) {
+
+	}
+
+	.nav-links {
+
+		@include media(tablet) {
+
+		}
+
+		@include media(desktop) {
+
+		}
+
+		a {
+			.meta-nav {
+				
+			}
+
+			.post-title {
+				
+			}
+
+			&:hover {
+				color: $color__link-hover;
+			}
+		}
+
+		.nav-previous,
+		.nav-next {
+
+			@include media(desktop) {
+
+			}
+		}
+
+		.nav-previous {
+
+			@include media(desktop) {
+
+			}
+
+			+ .nav-next {
+
+			}
+		}
+
+		.nav-next {
+
+			@include media(desktop) {
+
+			}
+		}
+	}
+}
+
+// Index/archive navigation
+.pagination {
+
+	.nav-links {
+
+		& > * {
+
+			&.dots,
+			&.prev {
+				padding-left: 0;
+			}
+
+			&.dots,
+			&.next {
+				padding-right: 0;
+			}
+		}
+
+		a:focus {
+
+			&.prev,
+			&.next {
+				text-decoration: none;
+
+				.nav-prev-text,
+				.nav-next-text {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.nav-next-text,
+		.nav-prev-text {
+			display: none;
+		}
+	}
+}
+
+// Comments navigation
+.comment-navigation {
+
+	.nav-links {
+
+	}
+
+	.nav-previous,
+	.nav-next {
+
+		.secondary-text {
+
+			@include media(tablet) {
+
+			}
+		}
+	}
+
+	.nav-next {
+		text-align: right;
+	}
+}

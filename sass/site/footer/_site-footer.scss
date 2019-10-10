@@ -1,0 +1,36 @@
+/* Site footer */
+
+#colophon {
+
+	.widget-area,
+	.site-info {
+
+		@include media(tablet) {
+
+		}
+	}
+
+	.widget-column {
+
+		.widget {
+
+			@include media(desktop) {
+
+			}
+		}
+	}
+
+	.site-info {
+
+		a {
+
+			&:hover {
+
+			}
+		}
+
+		.privacy-policy-link {
+
+		}
+	}
+}

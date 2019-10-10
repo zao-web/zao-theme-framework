@@ -1,0 +1,292 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comments-area {
+
+	@include media(tablet) {
+
+	}
+
+	& > * {
+
+		@include media(tablet) {
+
+		}
+	}
+
+	/* Add extra margin when the comments section is located immediately after the
+	 * post itself (this happens on pages).
+	 */
+	.entry + & {
+
+	}
+
+	.comments-title-wrap {
+
+		@include media(tablet) {
+
+		}
+
+		.comments-title {
+
+
+			@include media(tablet) {
+
+			}
+		}
+
+		.discussion-meta {
+			@include media(tablet) {
+
+			}
+		}
+	}
+}
+
+#comment {
+
+}
+
+#respond {
+
+
+	.comment-user-avatar {
+
+	}
+
+	.comment .comment-form {
+
+	}
+
+	> small {
+
+	}
+}
+
+#comments {
+
+}
+
+.comment-form-flex {
+
+	.comments-title {
+
+	}
+
+	#respond {
+
+		+ .comments-title {
+
+		}
+	}
+}
+
+.comment-list {
+
+	.children {
+
+	}
+
+	> .comment:first-child {
+
+	}
+
+	.pingback,
+	.trackback {
+
+		.comment-body {
+
+			a:not(.comment-edit-link) {
+
+			}
+
+			.comment-edit-link {
+
+			}
+		}
+	}
+}
+
+.comment-reply {
+
+	#respond + & {
+
+	}
+
+	.comment-reply-link {
+
+	}
+}
+
+.comment {
+	list-style: none;
+
+	@include media(tablet) {
+
+		&.depth-1,
+		.children {
+
+		}
+
+		&.depth-1 {
+
+		}
+	}
+
+	.comment-body {
+
+	}
+
+
+	.comment-meta {
+
+	}
+
+	.comment-author {
+
+		.avatar {
+
+			@include media(tablet) {
+
+			}
+		}
+
+		.fn {
+
+			a {
+
+				&:hover {
+
+				}
+			}
+		}
+
+		.post-author-badge {
+
+			@include media(tablet) {
+
+			}
+
+			svg {
+
+			}
+		}
+	}
+
+	.comment-metadata {
+
+		> a,
+		.comment-edit-link {
+
+			time {
+
+			}
+
+			&:hover {
+
+			}
+		}
+
+		> * {
+
+		}
+
+		.comment-edit-link {
+
+			&:hover {
+
+			}
+		}
+	}
+
+	.comment-content {
+
+		@include media(desktop) {
+
+		}
+
+		> *:first-child {
+			margin-top: 0;
+		}
+
+		> *:last-child {
+			margin-bottom: 0;
+		}
+
+		blockquote {
+
+		}
+
+		a {
+
+			&:hover {
+
+			}
+		}
+	}
+}
+
+.comment-reply-link,
+#cancel-comment-reply-link {
+
+	&:hover {
+
+	}
+}
+
+.discussion-avatar-list {
+
+	li {
+
+	}
+
+	.comment-user-avatar {
+
+		img {
+
+		}
+	}
+}
+
+.discussion-meta {
+
+	.discussion-meta-info {
+
+		.svg-icon {
+
+		}
+	}
+
+}
+
+.comment-form {
+
+	.comment-notes,
+	label {
+
+	}
+
+	.comment-form-author,
+	.comment-form-email {
+		@include media(tablet) {
+
+		}
+	}
+
+	.comment-form-email {
+		@include media(tablet) {
+
+		}
+	}
+
+	input[name="author"],
+	input[name="email"],
+	input[name="url"] {
+
+	}
+}

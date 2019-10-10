@@ -1,0 +1,50 @@
+html {
+	box-sizing: border-box;
+}
+
+::-moz-selection {
+	background-color: $color__background_selection;
+}
+
+::selection {
+	background-color: $color__background_selection;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: $color__background-body;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+}
+
+@import "lists";
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+}
+
+blockquote {
+
+	> p {
+
+	}
+
+	cite {
+
+	}
+}
+
+@import "tables";

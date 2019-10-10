@@ -1,0 +1,16 @@
+.widget {
+	margin: 0 0 #{$size__spacing-unit};
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+
+	a {
+		color: $color__link;
+
+		&:hover {
+			color: $color__link-hover;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.archive .page-header,
+.search .page-header,
+.error404 .page-header {
+
+	@include media(tablet) {
+
+	}
+
+	.page-title {
+
+	}
+
+	.search-term,
+	.page-description {
+
+	}
+}
+
+.archive .page-header .page-description {
+
+}
+
+.hfeed .entry .entry-header {
+
+	@include media(tablet) {
+
+	}
+}
+
+/* 404 & Not found */
+
+.error-404.not-found,
+.no-results.not-found {
+
+	.page-content {
+
+		@include media(tablet) {
+
+		}
+	}
+
+	.search-submit {
+
+	}
+
+	.search-field {
+
+	}
+}

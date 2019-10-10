@@ -1,0 +1,72 @@
+.author-description .author-link,
+.comment-metadata,
+.comment-reply-link,
+.comments-title,
+.comment-author .fn,
+.discussion-meta-info,
+.entry-meta,
+.entry-footer,
+.main-navigation,
+.no-comments,
+.not-found .page-title,
+.error-404 .page-title,
+.post-navigation .post-title,
+.page-links,
+.page-description,
+.pagination .nav-links,
+.sticky-post,
+.site-title,
+.site-info,
+#cancel-comment-reply-link,
+img:after,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $font__heading;
+}
+
+h1 {
+	font-size: $font__size-xl;
+
+	@include media(tablet) {
+		font-size: $font__size-xxl;
+	}
+}
+
+.has-larger-font-size,
+h2 {
+	font-size: $font__size-lg;
+
+	@include media(tablet) {
+		font-size: $font__size-xl;
+	}
+}
+
+.has-regular-font-size,
+.has-large-font-size,
+h3 {
+	font-size: $font__size-lg;
+}
+
+h4 {
+	font-size: $font__size-md;
+}
+
+h5 {
+	font-size: $font__size-sm;
+}
+
+img:after,
+h6 {
+	font-size: $font__size-xs;
+}
+
+/* Do not hyphenate entry title on tablet view and bigger. */
+.entry-title {
+	@include media(tablet) {
+		hyphens: none;
+	}
+}

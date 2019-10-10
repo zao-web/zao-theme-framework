@@ -1,0 +1,92 @@
+// Site header
+
+.site-header {
+
+	&.featured-image {
+
+		.site-branding-container {
+
+		}
+	}
+
+	@include media(tablet) {
+
+		&.featured-image {
+
+		}
+	}
+}
+
+// Site branding
+
+.site-branding {
+
+	@include media(tablet) {
+
+	}
+}
+
+// Site logo
+
+.site-logo {
+
+	@include media(tablet) {
+
+	}
+
+	.custom-logo-link {
+
+		.custom-logo {
+
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+
+		}
+
+		@include media(tablet) {
+
+		}
+	}
+}
+
+// Site title
+
+.site-title {
+
+	a {
+
+		&:link,
+		&:visited {
+
+		}
+
+		&:hover {
+
+		}
+	}
+
+	.featured-image & {
+
+		@include media(tablet) {
+
+		}
+	}
+
+	/* When there is no description set, make sure navigation appears below title. */
+	+ .main-navigation {
+		display: block;
+	}
+
+	@include media(tablet) {
+
+	}
+}
+
+// Site description
+
+.site-description {
+
+}
