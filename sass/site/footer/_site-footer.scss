@@ -1,6 +1,7 @@
 /* Site footer */
 
-#colophon {
+.site-footer {
+	@include gridSection();
 
 	.widget-area,
 	.site-info {
