@@ -1,0 +1,77 @@
+/* 
+* An IE11 Compatible version of Grid Column
+* Assumes the main grid is 17 columns, needs adjusting if 
+*/
+@mixin grid-column($start, $end, $numCols: $site__columns) {
+	grid-column-start: $start;
+	// IE doesn't like negative grid numbers.
+	// If number of columns changes, we'll need to adjust this mixin for negative numbers
+
+	// Have full width span all possible columns
+	@if $end == -1 {
+		grid-column-end: $numCols+1; //+1 spans the last column
+	//We need to account for mobile, tablet, and desktop sizes to have the correct spans
+	} @else if $end == -2 and $numCols == $site__total-columns-desktop {
+		grid-column-end: $site__total-columns-mobile; // Will span all but the last column in mobile
+
+		@include media(tablet) {
+			// Need column start again here to calculate span for IE
+			grid-column-start: $start;
+			grid-column-end: $site__total-columns-tablet; // Will span all but the last column in tablet
+		}
+
+		@include media(desktop) {
+			// Need column start again here to calculate span for IE
+			grid-column-start: $start;
+			grid-column-end: $site__total-columns-desktop; // Will span all but the last column in desktop
+		}
+	// If we have custom number of columns, span all but last one
+	} @else if $end == -2 and $numCols != $site__total-columns-desktop {
+		grid-column-end: $numCols;
+	//There is no mobile/tablet -3 columns, so we only need to account for desktop grid
+	} @else if $end == -3 {
+		grid-column-end: $numCols - 1;
+	//There is no mobile/tablet -4 columns, so we only need to account for desktop grid
+	} @else if $end == -4 {
+		grid-column-end: $numCols - 2;
+	//There is no mobile/tablet -5 columns, so we only need to account for desktop grid
+	} @else if $end == -5 {
+		grid-column-end: $numCols - 3;
+	//There is no mobile/tablet -6 columns, so we only need to account for desktop grid
+	} @else if $end == -6 {
+		grid-column-end: $numCols - 4;
+	//There is no mobile/tablet -6 columns, so we only need to account for desktop grid
+	} @else if $end == -7 {
+		grid-column-end: $numCols - 5;
+	//There is no mobile/tablet -6 columns, so we only need to account for desktop grid
+	} @else if $end == -8 {
+		grid-column-end: $numCols - 6;
+	//There is no mobile/tablet -6 columns, so we only need to account for desktop grid
+	} @else if $end == -9 {
+		grid-column-end: $numCols - 7;
+	// If we're not given a negative number, we want the end to be what we set.
+	} @else {
+		grid-column-end: $end;
+	}
+}
+
+@mixin gridSection {
+	display: grid;
+	grid-template-columns: $size__mobile-grid;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: $size__max-site-width;
+	width: 100%;
+
+	@include media(tablet) {
+		grid-template-columns: $size__tablet-grid;
+	}
+
+	@include media(desktop) {
+		grid-template-columns: $size__desktop-grid;
+	}
+
+	@include media(wide) {
+		grid-template-columns: $size__wide-grid;
+	}
+}
