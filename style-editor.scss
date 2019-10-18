@@ -14,8 +14,7 @@ Gutenberg Starter Theme Editor Styles
 body {
 
 	.editor-block-list__layout {
-		display: grid;
-		grid-template-columns: $size__site-gutter 1fr 1fr 5fr 1fr 1fr $size__site-gutter;
+		@include gridSection();
 		padding-left: 0;
 		padding-right: 0;
 
