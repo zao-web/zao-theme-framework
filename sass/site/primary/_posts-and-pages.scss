@@ -32,6 +32,10 @@
 
 	.entry-header {
 		@include gridSection();
+
+		& > * {
+			@include regularContentMaxWidth();
+		}
 	}
 
 	.entry-title {
@@ -107,6 +111,10 @@
 
 	.entry-footer {
 		@include gridSection();
+
+		& > * {
+			@include regularContentMaxWidth();
+		}
 	}
 
 	.post-thumbnail {
