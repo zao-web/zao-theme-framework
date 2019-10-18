@@ -45,8 +45,6 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	@include postContentMaxWidth();
-
 	@include media(tablet) {
 		margin-left: 0;
 		margin-right: 0;
