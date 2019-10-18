@@ -1,0 +1,72 @@
+print.css
+style-editor-customizer.css
+style-editor.css
+style-rtl.css
+style.css
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+
+# Logs and databases #
+######################
+*.log
+*.sql
+test-reports
+junit.xml
+*report.html
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+
+# Vim generated files #
+######################
+*.un~
+
+# SASS #
+##########
+.sass-cache
+
+# Lando #
+#########
+app
+
+# Composer #
+############
+vendor/
+!web/wp-content/themes/dragonspell/js/vendor/
+
+# Dotenv #
+##########
+.env
+
+# NPM #
+#######
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Editor config #
+#################
+.vscode
+*.code-workspace
+*.sublime-workspace
+/.idea
