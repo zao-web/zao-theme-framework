@@ -1,16 +1,29 @@
-// Responsive widths.
-
+// Site sizes.
 $size__spacing-unit: 1rem;
 $size__site-main: 100%;
-$size__site-gutter: 2em;
+$size__site-gutter-mobile: rem-calc(20);
+$size__site-gutter-tablet: rem-calc(50);
 $size__site-sidebar: 25%;
-$size__site-tablet-content: calc(8 * (100vw / 12) - 28px);
-$size__site-desktop-content: calc(8 * (100vw / 12) - 28px);
+$size__max-site-width: 1600px;
 
-// Responsive widths.
+// Site Columns
+$site__content-columns-mobile: 2;
+$site__content-columns-tablet: 6;
+$site__content-columns-desktop: 15;
+$site__total-columns-mobile: $site__content-columns-mobile + 2;
+$site__total-columns-tablet: $site__content-columns-tablet + 2;
+$site__total-columns-desktop: $site__content-columns-desktop + 2;
 
+// Grid Widths
+$size__mobile-grid: $size__site-gutter-mobile repeat($site__content-columns-mobile, 1fr) $size__site-gutter-mobile;
+$size__tablet-grid: $size__site-gutter-tablet repeat($site__content-columns-tablet, 1fr) $size__site-gutter-tablet;
+$size__desktop-grid: 1.5fr repeat($site__content-columns-desktop, 1fr) 1.5fr;
+$size__wide-grid: 2fr repeat($site__content-columns-desktop, 1fr) 2fr;
+
+// Breakpoint widths.
 $mobile_width: 600px;
 $tablet_width: 768px;
 $desktop_width: 1168px;
 $wide_width: 1440px;
+$wpadmin_width: 782px;
 
