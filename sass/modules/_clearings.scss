@@ -2,19 +2,11 @@
 .clear:after,
 .comment-content:before,
 .comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+.site-content:before {
 	@include clearfix;
 }
 
 .clear:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.comment-content:after {
 	@include clearfix-after;
 }
