@@ -75,3 +75,27 @@
 		grid-template-columns: $size__wide-grid;
 	}
 }
+
+@mixin regularContentMaxWidth() {
+	grid-column: 2 / -2;
+
+	@include media(tablet) {
+		grid-column: 3 / -3;
+	}
+
+	@include media(desktop) {
+		grid-column: 4 / -4;
+	}
+}
+
+@mixin wideContentMaxWidth() {
+	grid-column: 2 / -2;
+
+	@include media(desktop) {
+		grid-column: 3 / -3;
+	}
+}
+
+@mixin fullContentMaxWidth() {
+	grid-column: 1 / -1;
+}
