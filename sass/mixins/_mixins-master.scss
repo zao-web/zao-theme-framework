@@ -69,27 +69,6 @@
 		0 0 1px 0 rgba( $color__text-light, 0.7 );  	// Antialiasing, outer edge.
 }
 
-@mixin regularContentMaxWidth() {
-	grid-column: 2 / -2;
-
-	@include media(tablet) {
-		grid-column: 4 / -4;
-	}
-}
-
-@mixin wideContentMaxWidth() {
-	grid-column: 2 / -2;
-
-	@include media(tablet) {
-		grid-column: 3 / -3;
-	}
-}
-
-@mixin fullContentMaxWidth() {
-	grid-column: 1 / -1;
-}
-
-
 /* Nested sub-menu padding: 10 levels deep */
 @mixin nestedSubMenuPadding() {
 
@@ -102,33 +81,6 @@
 		font-weight: normal;
 		content: "\2013\00a0" counters(submenu, "\2013\00a0", none);
 		counter-increment: submenu
-	}
-}
-
-
-@mixin media( $res ) {
-	@if mobile == $res {
-		@media only screen and (min-width: $mobile_width) {
-			@content;
-		}
-	}
-
-	@if tablet == $res {
-		@media only screen and (min-width: $tablet_width) {
-			@content;
-		}
-	}
-
-	@if desktop == $res {
-		@media only screen and (min-width: $desktop_width) {
-			@content;
-		}
-	}
-
-	@if wide == $res {
-		@media only screen and (min-width: $wide_width) {
-			@content;
-		}
 	}
 }
 
