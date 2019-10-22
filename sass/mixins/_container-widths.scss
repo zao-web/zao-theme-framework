@@ -2,7 +2,7 @@
 * An IE11 Compatible version of Grid Column
 * Assumes the main grid is 17 columns, needs adjusting if 
 */
-@mixin grid-column($start, $end, $numCols: $site__columns) {
+@mixin grid-column($start, $end, $numCols: $site__total-columns-desktop) {
 	grid-column-start: $start;
 	// IE doesn't like negative grid numbers.
 	// If number of columns changes, we'll need to adjust this mixin for negative numbers
