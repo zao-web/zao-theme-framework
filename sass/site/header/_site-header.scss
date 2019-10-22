@@ -74,15 +74,6 @@
 
 		}
 	}
-
-	/* When there is no description set, make sure navigation appears below title. */
-	+ .main-navigation {
-		display: block;
-	}
-
-	@include media(tablet) {
-
-	}
 }
 
 // Site description
