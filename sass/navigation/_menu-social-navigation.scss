@@ -4,17 +4,13 @@
 	margin-top: calc(#{$size__spacing-unit} / 2 );
 	text-align: left;
 
-	ul.social-links-menu {
-		@include clearfix;
-
-		display: inline-block;
+	.social-links-menu {
+		display: flex;
+		align-items: center;
 		margin: 0;
 		padding: 0;
 
 		li {
-			display: inline-block;
-			vertical-align: bottom;
-			vertical-align: -webkit-baseline-middle;
 			list-style: none;
 
 			&:nth-child(n+2) {
