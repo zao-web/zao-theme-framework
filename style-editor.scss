@@ -43,6 +43,7 @@ body {
 	}
 
 	.wp-block {
+		max-width: 100%;
 
 		&[data-align="right"] {
 			@include media(tablet) {
