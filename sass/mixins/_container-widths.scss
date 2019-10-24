@@ -77,25 +77,25 @@
 }
 
 @mixin regularContentMaxWidth() {
-	grid-column: 2 / -2;
+	@include grid-column(2, -2);
 
 	@include media(tablet) {
-		grid-column: 3 / -3;
+		@include grid-column(3, -3);
 	}
 
 	@include media(desktop) {
-		grid-column: 4 / -4;
+		@include grid-column(4, -4);
 	}
 }
 
 @mixin wideContentMaxWidth() {
-	grid-column: 2 / -2;
+	@include grid-column(2, -2);
 
 	@include media(desktop) {
-		grid-column: 3 / -3;
+		@include grid-column(3, -3);
 	}
 }
 
 @mixin fullContentMaxWidth() {
-	grid-column: 1 / -1;
+	@include grid-column(1, -1);
 }
