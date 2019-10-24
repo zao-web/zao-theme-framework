@@ -79,10 +79,6 @@
 @mixin regularContentMaxWidth() {
 	@include grid-column(2, -2);
 
-	@include media(tablet) {
-		@include grid-column(3, -3);
-	}
-
 	@include media(desktop) {
 		@include grid-column(4, -4);
 	}
