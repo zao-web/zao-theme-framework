@@ -53,55 +53,55 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "sass/functions/units";
-@import "sass/variables-site/variables-site";
-@import "sass/mixins/utilities";
+@import "assets/sass/functions/units";
+@import "assets/sass/variables-site/variables-site";
+@import "assets/sass/mixins/utilities";
 
 /* Normalize */
 
-@import "sass/normalize";
+@import "assets/sass/normalize";
 
 /* Typography */
 
-@import "sass/typography/typography";
+@import "assets/sass/typography/typography";
 
 /* Elements */
 
-@import "sass/elements/elements";
+@import "assets/sass/elements/elements";
 
 /* Forms */
 
-@import "sass/forms/forms";
+@import "assets/sass/forms/forms";
 
 /* Navigation */
 
-@import "sass/navigation/navigation";
+@import "assets/sass/navigation/navigation";
 
 /* Accessibility */
 
-@import "sass/modules/accessibility";
+@import "assets/sass/modules/accessibility";
 
 /* Alignments */
 
-@import "sass/modules/alignments";
+@import "assets/sass/modules/alignments";
 
 /* Clearings */
 
-@import "sass/modules/clearings";
+@import "assets/sass/modules/clearings";
 
 /* Layout */
 
-@import "sass/layout/layout";
+@import "assets/sass/layout/layout";
 
 /* Content */
 
-@import "sass/site/site";
+@import "assets/sass/site/site";
 
 /* Widgets */
 
-@import "sass/site/secondary/widgets";
+@import "assets/sass/site/secondary/widgets";
 
 
 /* Media */
 
-@import "sass/media/media";
+@import "assets/sass/media/media";

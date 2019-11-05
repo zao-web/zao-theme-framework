@@ -4,10 +4,10 @@ Gutenberg Starter Theme Editor Styles
 
 /** === Includes === */
 
-@import "sass/functions/units";
-@import "sass/variables-site/variables-site";
-@import "sass/mixins/utilities";
-@import "sass/blocks/blocks";
+@import "./assets/sass/functions/units";
+@import "./assets/sass/variables-site/variables-site";
+@import "./assets/sass/mixins/utilities";
+@import "./assets/sass/blocks/blocks";
 
 /** === Editor Frame === */
 
