@@ -95,3 +95,18 @@
 @mixin fullContentMaxWidth() {
 	@include grid-column(1, -1);
 }
+
+@mixin editorWidths() {
+	& > * {
+		@include regularContentMaxWidth();
+		width: 100%;
+
+		&[data-align="wide"] {
+			@include wideContentMaxWidth();
+		}
+
+		&[data-align="full"] {
+			@include fullContentMaxWidth();
+		}
+	}
+}
