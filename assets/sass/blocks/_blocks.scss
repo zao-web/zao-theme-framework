@@ -348,16 +348,6 @@ ol {
 				@include wideContentMaxWidth;
 			}
 		}
-
-		.single & {
-			& > * {
-				@include regularPostContentMaxWidth;
-			}
-
-			& > *.alignwide {
-				@include wideContentMaxWidth;
-			}
-		}
 	}
 }
 
