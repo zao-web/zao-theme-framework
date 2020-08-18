@@ -307,6 +307,9 @@ p.has-background {
 //! Lists
 ul,
 ol {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
 	&.alignfull {
 		//Account for bullets/numbers left padding
 		padding-left: 2 * $size__spacing-unit;
