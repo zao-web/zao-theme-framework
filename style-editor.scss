@@ -7,38 +7,23 @@ Gutenberg Starter Theme Editor Styles
 @import "./assets/sass/functions/units";
 @import "./assets/sass/variables-site/variables-site";
 @import "./assets/sass/mixins/utilities";
+@import "./assets/sass/typography/typography";
 @import "./assets/sass/blocks/blocks";
 
 /** === Editor Frame === */
 
-body {
 
-	.editor-block-list__layout {
-		@include gridSection();
-		padding-left: 0;
-		padding-right: 0;
 
-		& > * {
-			@include regularContentMaxWidth();
-		}
+.is-root-container {
+	@include gridSection();
+	@include editorWidths();
+	padding-left: 0;
+	padding-right: 0;
 
-		& > .wp-block[data-align="wide"] {
-			@include wideContentMaxWidth();
-		}
-
-		& > .wp-block[data-align="full"] {
-			@include fullContentMaxWidth();
-		}
-
-		.block-editor-block-list__block {
-			&[data-align=full] {
-				margin: $size__spacing-unit;
-			}
-
-			.block-editor-warning {
-				margin-left: 0;
-				margin-right: 0;
-			}
+	.block-editor-block-list__block {
+		.block-editor-warning {
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 
@@ -51,14 +36,14 @@ body {
 			}
 		}
 	}
+}
 
-	.editor-post-title__block,
-	.editor-default-block-appender,
-	.editor-block-list__block {
-		@include media(tablet) {
-			margin-left: 0;
-			margin-right: 0;
-		}
+.editor-post-title__block,
+.editor-default-block-appender,
+.editor-block-list__block {
+	@include media(tablet) {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
