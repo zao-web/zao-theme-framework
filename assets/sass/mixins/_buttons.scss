@@ -1,17 +1,16 @@
 @mixin btn-base {
 	@include button-transition;
-	background: $color__background-button;
-	border: 2px solid $color__background-button;
 	box-sizing: border-box;
 	color: $color__background-body;
+	cursor: pointer;
 	font-family: $font__heading;
 	font-size: $font__size_base;
 	outline: none;
 	text-decoration: none;
 
-	&:hover {
-		cursor: pointer;
-		background: $color__background-button-hover;
+	&:hover,
+	&:focus {
+		text-decoration: none;
 	}
 
 	&:visited {
@@ -19,7 +18,19 @@
 	}
 
 	&:focus {
+		outline: none;
+	}
+}
+
+@mixin btn-primary {
+	background: $color__background-button;
+	border: 2px solid $color__background-button;
+	color: $color__white;
+
+	&:hover,
+	&:focus {
 		background: $color__background-button-hover;
+		color: $color__white;
 	}
 }
 
