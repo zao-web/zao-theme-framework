@@ -47,49 +47,6 @@ Gutenberg Starter Theme Editor Styles
 	}
 }
 
-/** === Base Typography === */
-
-body {
-	font-size: $font__size_base;
-	font-family: $font__body;
-	line-height: $font__line-height-body;
-	color: $color__text-main;
-}
-
-p {
-	font-size: $font__size_base;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: $font__heading;
-}
-
-a {
-	@include link-transition;
-	color: $color__link;
-
-	*:visited {
-
-	}
-
-	&:hover,
-	&:active {
-		color: $color__link-hover;
-		outline: 0;
-		text-decoration: none;
-	}
-
-	&:focus {
-		outline: 0;
-		text-decoration: underline;
-	}
-}
-
 /** === Post Title === */
 
 .editor-post-title__block {
