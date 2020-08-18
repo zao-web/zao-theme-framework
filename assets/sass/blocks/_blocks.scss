@@ -320,6 +320,44 @@ ol {
 	}
 }
 
+//! Group
+.wp-block-group {
+	&,
+	&.has-background {
+
+	}
+
+	&.has-no-padding {
+		.entry-content > & {
+			padding: 0;
+		}
+	}
+
+	&.alignfull {
+		& > .wp-block-group__inner-container {
+			@include gridSection();
+
+			& > * {
+				@include regularContentMaxWidth;
+			}
+
+			& > *.alignwide {
+				@include wideContentMaxWidth;
+			}
+		}
+
+		.single & {
+			& > * {
+				@include regularPostContentMaxWidth;
+			}
+
+			& > *.alignwide {
+				@include wideContentMaxWidth;
+			}
+		}
+	}
+}
+
 //! Separator
 // CSS Grid makes the seperator wonky, need width set to fix
 .wp-block-separator {
