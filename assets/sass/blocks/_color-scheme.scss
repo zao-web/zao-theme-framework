@@ -1,0 +1,86 @@
+$dark-colors: (
+	'primary': $color__theme-primary,
+	'secondary': $color__theme-secondary,
+	'dark-gray': $color__theme-dark-gray,
+	'light-gray': $color__theme-light-gray,
+);
+
+@each $name, $color in $dark-colors {
+	.has-#{$name}-background-color {
+		// Use white text against these backgrounds by default.
+		color: $color__theme-white;
+
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			&:not(.has-text-color) {
+				color: $color__theme-white;
+			}
+		}
+	}
+}
+
+
+.has-white-background-color {
+	color: $color__text-main;
+
+	// Use dark gray text against this background by default.
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $color__text-main;
+	}
+}
+
+// Gutenberg color options
+// -- see editor-color-palette in functions.php
+$colors: (
+	'primary': $color__theme-primary,
+	'secondary': $color__theme-secondary,
+	'dark-gray': $color__theme-dark-gray,
+	'light-gray': $color__theme-light-gray,
+	'white': $color__theme-white,
+);
+
+@each $name, $color in $colors {
+	.has-#{$name}-background-color,
+	.wp-block-pullquote.is-style-solid-color.has-#{$name}-background-color {
+		background-color: $color;
+	}
+
+	//! Custom foreground colors
+	.has-#{$name}-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-#{$name}-color,
+	.wp-block-pullquote.is-style-solid-color blockquote.has-#{$name}-color p {
+		color: $color;
+	}
+
+	.has-#{$name}-color {
+		a {
+			color: $color;
+		}
+	}
+
+	// override core block styles
+	.wp-block-button__link {
+		&.has-#{$name}-background-color {
+			background-color: $color;
+			border-color: $color;
+
+			&:hover,
+			&:focus {
+				background-color: $color__theme-white;
+				border-color: $color;
+				color: $color;
+			}
+		}
+	}
+}
